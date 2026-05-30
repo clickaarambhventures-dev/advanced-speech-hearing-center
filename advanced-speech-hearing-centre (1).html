@@ -1,0 +1,1531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Advanced Speech & Hearing Centre | Best Speech Therapist & Hearing Aid Clinic in Begusarai, Bihar</title>
+<meta name="description" content="Advanced Speech & Hearing Centre in Begusarai, Bihar offers expert speech therapy, hearing tests (OAE, BERA, PTA), and hearing aid dispensing. Treating autism, cerebral palsy, stuttering & more.">
+<meta name="keywords" content="best speech therapist in Begusarai, hearing aids in Bihar, autism clinic Begusarai, BERA test Bihar, speech therapy for children Begusarai, hearing test Begusarai, audiologist Bihar">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   DESIGN TOKENS
+============================================================ */
+:root {
+  --teal-deep:   #0d7377;
+  --teal-mid:    #14a085;
+  --teal-light:  #1abc9c;
+  --teal-pale:   #d4f5ef;
+  --blue-deep:   #1a4f6e;
+  --blue-light:  #d6eaf8;
+  --green-soft:  #e8f8f5;
+  --green-acc:   #27ae60;
+  --warm-white:  #fafcfc;
+  --off-white:   #f0f8f6;
+  --text-dark:   #1a2e2c;
+  --text-body:   #3a5250;
+  --text-muted:  #6b8e8c;
+  --border:      #cce8e3;
+  --sh-sm: 0 2px 12px rgba(13,115,119,.08);
+  --sh-md: 0 8px 32px rgba(13,115,119,.12);
+  --sh-lg: 0 20px 60px rgba(13,115,119,.16);
+  --r:  16px;
+  --rs: 10px;
+}
+
+/* ============================================================
+   RESET & BASE
+============================================================ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--warm-white);
+  color: var(--text-dark);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+h1,h2,h3,h4 { font-family: 'DM Serif Display', serif; line-height: 1.2; color: var(--text-dark); }
+img { max-width: 100%; display: block; }
+a { text-decoration: none; color: inherit; }
+button { cursor: pointer; font-family: inherit; }
+
+/* ============================================================
+   LAYOUT UTILITIES
+============================================================ */
+.wrap        { width: 100%; max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+.sec         { padding: 80px 0; }
+.sec-sm      { padding: 56px 0; }
+.text-c      { text-align: center; }
+.text-c .sub { margin-inline: auto; }
+
+.chip {
+  display: inline-block;
+  font-size: .72rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+  color: var(--teal-mid); background: var(--teal-pale);
+  padding: 5px 14px; border-radius: 50px; margin-bottom: 14px;
+}
+h2.ttl  { font-size: clamp(1.75rem, 4vw, 2.7rem); margin-bottom: 14px; }
+p.sub   { font-size: 1rem; color: var(--text-body); max-width: 580px; line-height: 1.72; }
+
+/* BUTTONS */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 26px; border-radius: 50px;
+  font-family: inherit; font-weight: 600; font-size: .9rem;
+  border: none; transition: all .25s; white-space: nowrap;
+}
+.btn-p  { background: var(--teal-deep); color: #fff; box-shadow: 0 4px 18px rgba(13,115,119,.35); }
+.btn-p:hover  { background: var(--blue-deep); transform: translateY(-2px); }
+.btn-o  { background: transparent; color: var(--teal-deep); border: 2px solid var(--teal-deep); }
+.btn-o:hover  { background: var(--teal-deep); color: #fff; }
+.btn-w  { background: #fff; color: var(--teal-deep); box-shadow: 0 4px 16px rgba(0,0,0,.12); }
+.btn-w:hover  { background: var(--teal-pale); }
+.btn-ghost { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.45); }
+.btn-ghost:hover { background: rgba(255,255,255,.12); }
+.btn-full { width: 100%; justify-content: center; }
+
+/* ============================================================
+   TOP BAR
+============================================================ */
+.topbar {
+  background: var(--blue-deep);
+  color: rgba(255,255,255,.85);
+  font-size: .8rem;
+  padding: 7px 0;
+}
+.topbar-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px; flex-wrap: wrap;
+}
+.topbar a { color: inherit; }
+.topbar a:hover { color: #fff; }
+.tb-item { display: flex; align-items: center; gap: 5px; }
+.tb-left  { display: flex; gap: 20px; flex-wrap: wrap; }
+.tb-right { display: flex; gap: 20px; flex-wrap: wrap; }
+
+/* ============================================================
+   HEADER
+============================================================ */
+header {
+  position: sticky; top: 0; z-index: 1000;
+  background: rgba(255,255,255,.97);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  box-shadow: var(--sh-sm);
+}
+.hdr-inner {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 0; gap: 16px;
+}
+
+/* Logo */
+.logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.logo-ico {
+  width: 44px; height: 44px; border-radius: 11px; flex-shrink: 0;
+  background: linear-gradient(135deg, var(--teal-deep), var(--teal-light));
+  display: flex; align-items: center; justify-content: center;
+}
+.logo-ico svg { width: 24px; height: 24px; fill: #fff; }
+.logo-txt .nm  { font-family: 'DM Serif Display',serif; font-size: 1rem; color: var(--text-dark); line-height: 1.1; }
+.logo-txt .tg  { font-size: .68rem; color: var(--text-muted); font-weight: 500; }
+
+/* Desktop nav */
+.desk-nav { display: flex; align-items: center; gap: 2px; }
+.desk-nav a {
+  padding: 7px 12px; border-radius: 7px;
+  font-size: .84rem; font-weight: 500; color: var(--text-body); transition: all .2s;
+}
+.desk-nav a:hover, .desk-nav a.active { color: var(--teal-deep); background: var(--teal-pale); }
+
+/* Header CTAs */
+.hdr-cta { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.call-btn {
+  display: flex; align-items: center; gap: 7px;
+  padding: 9px 16px; border-radius: 50px;
+  font-weight: 600; font-size: .84rem;
+  background: var(--teal-pale); color: var(--teal-deep); transition: all .2s;
+  white-space: nowrap;
+}
+.call-btn:hover { background: var(--teal-deep); color: #fff; }
+.ham {
+  display: none; flex-direction: column; gap: 5px;
+  background: none; border: none; padding: 7px;
+}
+.ham span { display: block; width: 22px; height: 2px; background: var(--text-dark); border-radius: 2px; transition: .3s; }
+
+/* ============================================================
+   MOBILE NAV DRAWER
+============================================================ */
+.mob-nav {
+  display: none; position: fixed; inset: 0; z-index: 1100;
+  background: rgba(0,0,0,.5);
+}
+.mob-nav.open { display: flex; }
+.mob-panel {
+  background: #fff; width: min(300px, 85vw); height: 100%;
+  padding: 28px 20px; overflow-y: auto;
+  display: flex; flex-direction: column; gap: 6px;
+  box-shadow: 4px 0 32px rgba(0,0,0,.15);
+}
+.mob-panel .mob-head {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 20px;
+}
+.mob-panel .mob-logo-txt { font-family: 'DM Serif Display',serif; font-size: .95rem; color: var(--text-dark); }
+.mob-close { background: none; border: none; font-size: 1.4rem; color: var(--text-dark); }
+.mob-panel a {
+  display: block; padding: 11px 14px; border-radius: 8px;
+  font-size: .92rem; font-weight: 500; color: var(--text-body); transition: all .2s;
+}
+.mob-panel a:hover { background: var(--teal-pale); color: var(--teal-deep); }
+.mob-panel .mob-cta { margin-top: 14px; }
+
+/* ============================================================
+   HERO
+============================================================ */
+.hero {
+  background: linear-gradient(145deg,#0a3d52 0%,var(--teal-deep) 55%,#0e8e7a 100%);
+  position: relative; overflow: hidden;
+  padding: 72px 0 0;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23fff' fill-opacity='.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/svg%3E");
+}
+.blob {
+  position: absolute; border-radius: 50%; filter: blur(72px); opacity: .13; pointer-events: none;
+}
+.blob-1 { width: 420px; height: 420px; background: var(--teal-light); top: -120px; right: -80px; }
+.blob-2 { width: 280px; height: 280px; background: #2980b9; bottom: 60px; left: 18%; }
+
+.hero-inner {
+  position: relative; z-index: 2;
+  display: grid; grid-template-columns: 1fr 400px; gap: 48px; align-items: start;
+}
+
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.2);
+  color: rgba(255,255,255,.9); padding: 6px 16px; border-radius: 50px;
+  font-size: .78rem; font-weight: 500; margin-bottom: 20px;
+}
+.hero-badge .dot { width: 7px; height: 7px; background: var(--teal-light); border-radius: 50%; animation: pulse 2s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.5)} }
+
+.hero h1 {
+  font-size: clamp(2rem, 4.5vw, 3.4rem);
+  color: #fff; margin-bottom: 18px; line-height: 1.15;
+}
+.hero h1 em { font-style: italic; color: var(--teal-light); }
+.hero-sub {
+  font-size: 1rem; color: rgba(255,255,255,.8);
+  margin-bottom: 32px; max-width: 500px; line-height: 1.72;
+}
+.hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
+.hero-stats {
+  display: flex; gap: 24px; flex-wrap: wrap;
+  padding-top: 28px; border-top: 1px solid rgba(255,255,255,.15);
+}
+.hstat .num { font-family: 'DM Serif Display',serif; font-size: 2rem; color: #fff; }
+.hstat .lbl { font-size: .76rem; color: rgba(255,255,255,.6); margin-top: 2px; }
+
+/* Booking card */
+.book-card {
+  background: #fff; border-radius: 22px;
+  padding: 30px 24px; box-shadow: 0 24px 60px rgba(0,0,0,.22);
+  position: relative; z-index: 3;
+}
+.book-card h3 { font-size: 1.2rem; margin-bottom: 5px; }
+.book-card > p { font-size: .82rem; color: var(--text-muted); margin-bottom: 20px; }
+
+.fg { margin-bottom: 14px; }
+.fg label { display: block; font-size: .78rem; font-weight: 600; color: var(--text-body); margin-bottom: 5px; }
+.fg input, .fg select, .fg textarea {
+  width: 100%; padding: 11px 14px;
+  border: 1.5px solid var(--border); border-radius: 9px;
+  font-family: inherit; font-size: .88rem; color: var(--text-dark);
+  background: var(--off-white); outline: none; transition: border-color .2s, box-shadow .2s;
+}
+.fg input:focus, .fg select:focus, .fg textarea:focus {
+  border-color: var(--teal-mid); background: #fff;
+  box-shadow: 0 0 0 3px rgba(20,160,133,.1);
+}
+.fg textarea { resize: vertical; min-height: 72px; }
+
+/* Trust bar */
+.trust-bar {
+  background: rgba(0,0,0,.18);
+  padding: 18px 0; margin-top: 40px;
+  position: relative; z-index: 2;
+}
+.trust-inner {
+  display: flex; align-items: center; justify-content: center;
+  gap: 32px; flex-wrap: wrap;
+  font-size: .82rem; color: rgba(255,255,255,.72);
+}
+.ti { display: flex; align-items: center; gap: 7px; }
+
+/* ============================================================
+   SERVICES STRIP
+============================================================ */
+.svc-strip { background: #fff; padding: 60px 0; }
+.svc-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.svc-card {
+  border: 1.5px solid var(--border); border-radius: var(--r);
+  padding: 28px 24px; transition: all .3s; position: relative; overflow: hidden;
+}
+.svc-card::after {
+  content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg,var(--teal-deep),var(--teal-light));
+  transform: scaleX(0); transition: transform .3s;
+}
+.svc-card:hover { box-shadow: var(--sh-md); border-color: var(--teal-mid); transform: translateY(-4px); }
+.svc-card:hover::after { transform: scaleX(1); }
+.svc-ico {
+  width: 52px; height: 52px; border-radius: 13px;
+  background: var(--green-soft); display: flex; align-items: center; justify-content: center;
+  margin-bottom: 18px;
+}
+.svc-card h3 { font-size: 1.08rem; margin-bottom: 8px; }
+.svc-card p  { font-size: .85rem; color: var(--text-body); line-height: 1.65; }
+.svc-lnk {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: .82rem; font-weight: 600; color: var(--teal-deep);
+  margin-top: 14px; transition: gap .2s;
+}
+.svc-card:hover .svc-lnk { gap: 8px; }
+
+/* ============================================================
+   WHY CHOOSE US
+============================================================ */
+.why { background: var(--off-white); }
+.why-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.why-vis { position: relative; padding-bottom: 40px; }
+.why-main {
+  background: linear-gradient(135deg,var(--teal-deep),var(--blue-deep));
+  border-radius: 22px; padding: 40px; color: #fff; position: relative; overflow: hidden;
+}
+.why-main::after {
+  content: ''; position: absolute; top: -40px; right: -40px;
+  width: 190px; height: 190px; border-radius: 50%; background: rgba(255,255,255,.04);
+}
+.why-num  { font-family:'DM Serif Display',serif; font-size: 4rem; color: rgba(255,255,255,.13); line-height: 1; margin-bottom: -12px; }
+.why-lbl  { font-size: 1.05rem; font-weight: 600; margin-bottom: 6px; }
+.why-sub  { font-size: .87rem; opacity: .73; }
+.why-float {
+  position: absolute; bottom: 0; right: 28px;
+  background: #fff; border-radius: 15px; padding: 18px 22px;
+  box-shadow: var(--sh-lg); text-align: center;
+}
+.why-float .big   { font-family:'DM Serif Display',serif; font-size: 1.9rem; color: var(--teal-deep); }
+.why-float .small { font-size: .72rem; color: var(--text-muted); }
+.why-badges { display: flex; gap: 10px; margin-top: 16px; }
+.mbadge {
+  background: #fff; border: 1.5px solid var(--border);
+  border-radius: 11px; padding: 14px 16px; flex: 1; text-align: center;
+  box-shadow: var(--sh-sm);
+}
+.mbadge .num { font-family:'DM Serif Display',serif; font-size: 1.5rem; color: var(--teal-deep); }
+.mbadge .lbl { font-size: .7rem; color: var(--text-muted); margin-top: 2px; }
+.why-feats { display: flex; flex-direction: column; gap: 16px; margin-top: 32px; }
+.wf {
+  display: flex; gap: 14px; align-items: flex-start;
+  padding: 18px; border-radius: var(--rs);
+  background: #fff; border: 1px solid var(--border); transition: all .2s;
+}
+.wf:hover { border-color: var(--teal-mid); box-shadow: var(--sh-sm); }
+.wf-ico {
+  width: 42px; height: 42px; border-radius: 10px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--teal-pale);
+}
+.wf h4 { font-size: .9rem; margin-bottom: 3px; }
+.wf p  { font-size: .82rem; color: var(--text-body); }
+
+/* ============================================================
+   CONDITIONS
+============================================================ */
+.cond { background: #fff; }
+.cond-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; margin-top: 44px; }
+.cc {
+  border: 1.5px solid var(--border); border-radius: var(--r);
+  padding: 24px 20px; transition: all .3s;
+}
+.cc:hover { border-color: var(--teal-mid); box-shadow: var(--sh-md); transform: translateY(-3px); }
+.cc .emo { font-size: 2rem; margin-bottom: 12px; display: block; }
+.cc h3  { font-size: .95rem; margin-bottom: 7px; font-family:'DM Sans',sans-serif; font-weight: 700; }
+.cc p   { font-size: .8rem; color: var(--text-body); line-height: 1.6; }
+.cc-tag {
+  display: inline-block; margin-top: 10px;
+  font-size: .7rem; font-weight: 700; letter-spacing: .05em;
+  padding: 3px 10px; border-radius: 50px;
+  background: var(--teal-pale); color: var(--teal-deep);
+}
+
+/* ============================================================
+   HEARING TESTS
+============================================================ */
+.htests { background: #fff; }
+.htest-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 22px; margin-top: 44px; }
+.htc { border-radius: var(--r); padding: 32px 26px; position: relative; overflow: hidden; }
+.htc-1 { background: linear-gradient(135deg,#e8f8f5,#d4f5ef); }
+.htc-2 { background: linear-gradient(135deg,#d6eaf8,#c8e4f5); }
+.htc-3 { background: linear-gradient(135deg,#fef9e7,#fdebd0); }
+.htc-4 { background: linear-gradient(135deg,#f3e8f8,#e8d5f5); }
+.htc-abbr {
+  position: absolute; top: 14px; right: 20px;
+  font-family:'DM Serif Display',serif; font-size: 2.8rem;
+  color: rgba(0,0,0,.07); line-height: 1;
+}
+.htc-badge {
+  display: inline-block; font-size: .7rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  padding: 3px 11px; border-radius: 50px;
+  background: rgba(255,255,255,.55); color: var(--text-body); margin-bottom: 12px;
+}
+.htc h3 { font-size: 1.12rem; margin-bottom: 9px; }
+.htc p  { font-size: .85rem; color: var(--text-body); line-height: 1.65; }
+.htc-ideal {
+  display: inline-flex; align-items: center; gap: 6px;
+  margin-top: 14px; font-size: .78rem; font-weight: 600; color: var(--teal-deep);
+}
+
+/* ============================================================
+   HEARING AIDS
+============================================================ */
+.haids { background: var(--off-white); }
+.haids-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.ha-types { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 28px; }
+.ha-t {
+  background: #fff; border: 1.5px solid var(--border);
+  border-radius: var(--rs); padding: 18px; transition: all .25s;
+}
+.ha-t:hover { border-color: var(--teal-mid); box-shadow: var(--sh-sm); }
+.ha-abbr {
+  display: inline-block; font-weight: 700; font-size: .82rem;
+  color: var(--teal-deep); background: var(--teal-pale);
+  padding: 3px 9px; border-radius: 6px; margin-bottom: 8px;
+}
+.ha-t h4 { font-size: .86rem; margin-bottom: 4px; font-family:'DM Sans',sans-serif; font-weight: 700; }
+.ha-t p  { font-size: .78rem; color: var(--text-body); }
+.ha-steps { display: flex; flex-direction: column; gap: 18px; margin-top: 28px; }
+.ha-step { display: flex; gap: 14px; align-items: flex-start; }
+.step-num {
+  width: 34px; height: 34px; border-radius: 50%; flex-shrink: 0;
+  background: var(--teal-deep); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: .82rem;
+}
+.ha-step h4 { font-size: .88rem; margin-bottom: 3px; font-family:'DM Sans',sans-serif; font-weight: 700; }
+.ha-step p  { font-size: .8rem; color: var(--text-body); }
+
+/* ============================================================
+   DOCTORS
+============================================================ */
+.docs { background: var(--off-white); }
+.docs-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 44px; }
+.dc {
+  background: #fff; border-radius: var(--r);
+  overflow: hidden; border: 1.5px solid var(--border); transition: all .3s;
+}
+.dc:hover { box-shadow: var(--sh-md); transform: translateY(-4px); }
+.dc-photo {
+  height: 200px;
+  background: linear-gradient(135deg,var(--teal-pale),var(--blue-light));
+  display: flex; align-items: center; justify-content: center;
+}
+.dc-avatar {
+  width: 110px; height: 110px; border-radius: 50%;
+  background: linear-gradient(135deg,var(--teal-deep),var(--blue-deep));
+  display: flex; align-items: center; justify-content: center;
+  border: 4px solid #fff; box-shadow: var(--sh-md);
+}
+.dc-avatar svg { width: 50px; height: 50px; fill: rgba(255,255,255,.8); }
+.dc-info { padding: 22px; }
+.dc-tag { font-size: .7rem; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; color: var(--teal-mid); margin-bottom: 7px; }
+.dc-info h3 { font-size: 1.1rem; margin-bottom: 3px; }
+.dc-info .deg { font-size: .78rem; color: var(--text-muted); margin-bottom: 10px; }
+.dc-info p { font-size: .82rem; color: var(--text-body); }
+
+/* ============================================================
+   TESTIMONIALS
+============================================================ */
+.testi {
+  background: linear-gradient(155deg,var(--blue-deep) 0%,var(--teal-deep) 100%);
+}
+.testi .chip { background: rgba(255,255,255,.14); color: rgba(255,255,255,.9); }
+.testi .ttl { color: #fff; }
+.testi .sub { color: rgba(255,255,255,.7); }
+.testi-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; margin-top: 44px; }
+.tc {
+  background: rgba(255,255,255,.1); backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,.14); border-radius: var(--r); padding: 26px;
+}
+.stars { display: flex; gap: 2px; margin-bottom: 14px; font-size: .95rem; color: #f1c40f; }
+.tc p   { font-size: .87rem; color: rgba(255,255,255,.83); line-height: 1.7; margin-bottom: 18px; }
+.ta     { display: flex; align-items: center; gap: 11px; }
+.tav {
+  width: 42px; height: 42px; border-radius: 50%; flex-shrink: 0;
+  background: rgba(255,255,255,.18); border: 2px solid rgba(255,255,255,.28);
+  display: flex; align-items: center; justify-content: center;
+  font-family:'DM Serif Display',serif; font-size: 1rem; color: #fff;
+}
+.ta-name   { font-weight: 600; color: #fff; font-size: .87rem; }
+.ta-detail { font-size: .73rem; color: rgba(255,255,255,.58); }
+
+/* ============================================================
+   FAQ
+============================================================ */
+.faq { background: #fff; }
+.faq-inner { display: grid; grid-template-columns: 340px 1fr; gap: 64px; align-items: start; }
+.faq-list { display: flex; flex-direction: column; gap: 10px; }
+.fi { border: 1.5px solid var(--border); border-radius: var(--rs); overflow: hidden; transition: border-color .2s; }
+.fi.open { border-color: var(--teal-mid); }
+.fq {
+  width: 100%; text-align: left; background: none; border: none;
+  padding: 18px 20px; display: flex; align-items: center; justify-content: space-between;
+  font-family: inherit; font-size: .88rem; font-weight: 600;
+  color: var(--text-dark); gap: 14px;
+}
+.fq svg { flex-shrink: 0; transition: transform .3s; color: var(--teal-mid); }
+.fi.open .fq svg { transform: rotate(180deg); }
+.fa {
+  padding: 0 20px; max-height: 0; overflow: hidden;
+  font-size: .85rem; color: var(--text-body); line-height: 1.72;
+  transition: max-height .35s ease, padding .35s ease;
+}
+.fi.open .fa { max-height: 260px; padding: 0 20px 18px; }
+
+/* ============================================================
+   ABOUT
+============================================================ */
+.abt { background: var(--off-white); }
+.abt-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
+.abt-vis {
+  background: linear-gradient(145deg,var(--teal-deep),var(--blue-deep));
+  border-radius: 22px; padding: 40px 36px; color: #fff;
+}
+.abt-vis h3 { font-size: 1.5rem; margin-bottom: 10px; }
+.abt-vis > p { opacity: .8; line-height: 1.72; font-size: .88rem; }
+.abt-vals { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
+.av {
+  display: flex; gap: 11px; align-items: flex-start;
+  background: rgba(255,255,255,.1); border-radius: 11px; padding: 13px 14px;
+}
+.av-icon { font-size: 1.3rem; flex-shrink: 0; }
+.av h4 { font-size: .87rem; margin-bottom: 2px; font-family:'DM Sans',sans-serif; font-weight: 700; }
+.av p  { font-size: .78rem; opacity: .74; }
+.abt-creds { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 32px; }
+.acred {
+  border-radius: 11px; padding: 18px 20px; flex: 1; min-width: 120px; text-align: center;
+}
+.acred-rci { background: var(--teal-pale); }
+.acred-iso { background: var(--blue-light); }
+.acred-yr  { background: #e8f5e9; }
+.acred .big { font-family:'DM Serif Display',serif; font-size: 1.8rem; }
+.acred-rci .big { color: var(--teal-deep); }
+.acred-iso .big { color: var(--blue-deep); }
+.acred-yr  .big { color: var(--green-acc); }
+.acred .sm  { font-size: .72rem; color: var(--text-muted); margin-top: 3px; }
+
+/* ============================================================
+   CTA BANNER
+============================================================ */
+.cta-ban {
+  background: linear-gradient(135deg,var(--teal-deep),var(--blue-deep));
+  padding: 68px 0; text-align: center;
+}
+.cta-ban h2 { font-size: clamp(1.6rem, 3.5vw, 2.6rem); color: #fff; margin-bottom: 14px; }
+.cta-ban p  { color: rgba(255,255,255,.78); margin-bottom: 32px; max-width: 480px; margin-inline: auto; }
+.cta-btns   { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+/* ============================================================
+   CONTACT
+============================================================ */
+.contact { background: #fff; }
+.contact-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; }
+.contact-info .ttl { font-size: clamp(1.4rem,3vw,1.8rem); margin-bottom: 8px; }
+.contact-info > .lead { color: var(--text-body); margin-bottom: 28px; font-size: .92rem; }
+.ci-list { display: flex; flex-direction: column; gap: 14px; }
+.ci {
+  display: flex; gap: 14px; align-items: flex-start;
+  padding: 18px; border-radius: var(--rs);
+  border: 1.5px solid var(--border); transition: all .2s;
+}
+.ci:hover { border-color: var(--teal-mid); box-shadow: var(--sh-sm); }
+.ci-ico {
+  width: 42px; height: 42px; border-radius: 9px; flex-shrink: 0;
+  background: var(--teal-pale); display: flex; align-items: center; justify-content: center;
+}
+.ci h4  { font-size: .82rem; font-weight: 700; margin-bottom: 3px; font-family:'DM Sans',sans-serif; }
+.ci p, .ci a { font-size: .85rem; color: var(--text-body); }
+.ci a:hover { color: var(--teal-deep); }
+.map-box {
+  margin-top: 20px; border-radius: var(--r); overflow: hidden;
+  border: 2px solid var(--border); height: 200px;
+  background: linear-gradient(135deg,var(--teal-pale),var(--blue-light));
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  color: var(--text-muted); gap: 10px;
+}
+.map-box svg { width: 38px; height: 38px; opacity: .35; }
+.map-box p { font-size: .82rem; font-weight: 500; }
+
+.cform-wrap .ttl  { font-size: 1.35rem; margin-bottom: 7px; }
+.cform-wrap .lead { color: var(--text-body); font-size: .85rem; margin-bottom: 24px; }
+.frow { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+/* ============================================================
+   FOOTER
+============================================================ */
+footer {
+  background: #0e2229;
+  color: rgba(255,255,255,.7);
+  padding: 60px 0 0;
+}
+.foot-inner { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 40px; }
+.foot-brand p {
+  font-size: .83rem; line-height: 1.72; margin: 14px 0 22px; opacity: .68;
+}
+.foot-logo { display: flex; align-items: center; gap: 10px; }
+.foot-logo-ico {
+  width: 38px; height: 38px; border-radius: 9px; flex-shrink: 0;
+  background: linear-gradient(135deg,var(--teal-deep),var(--teal-light));
+  display: flex; align-items: center; justify-content: center;
+}
+.foot-logo-ico svg { width: 20px; height: 20px; fill: #fff; }
+.foot-logo-nm { font-family:'DM Serif Display',serif; font-size: .95rem; color: #fff; }
+.foot-phone {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--teal-deep); color: #fff;
+  padding: 11px 18px; border-radius: 50px;
+  font-size: .87rem; font-weight: 600; transition: background .2s;
+}
+.foot-phone:hover { background: var(--teal-light); }
+.foot-col h4 {
+  font-family:'DM Sans',sans-serif; font-size: .78rem; font-weight: 700;
+  letter-spacing: .1em; text-transform: uppercase;
+  color: rgba(255,255,255,.38); margin-bottom: 18px;
+}
+.foot-col ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+.foot-col ul li a { font-size: .84rem; color: rgba(255,255,255,.62); transition: color .2s; }
+.foot-col ul li a:hover { color: var(--teal-light); }
+.foot-hrs { display: flex; flex-direction: column; gap: 7px; }
+.fhr { display: flex; justify-content: space-between; font-size: .82rem; }
+.fhr .d { color: rgba(255,255,255,.47); }
+.fhr .t { color: rgba(255,255,255,.82); font-weight: 500; }
+.fhr.cl .t { color: #e74c3c; }
+.foot-bot {
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding: 22px 0; margin-top: 52px;
+  display: flex; justify-content: space-between; align-items: center;
+  flex-wrap: wrap; gap: 10px; font-size: .77rem;
+}
+.foot-bot .copy { color: rgba(255,255,255,.38); }
+.foot-bot .seo  { color: rgba(255,255,255,.28); }
+
+/* ============================================================
+   SCROLL ANIMATION
+============================================================ */
+.fu { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
+.fu.vis { opacity: 1; transform: translateY(0); }
+
+/* ============================================================
+   ════════════  RESPONSIVE BREAKPOINTS  ════════════
+============================================================ */
+
+/* --- 1200px: keep layout but tighten gaps --- */
+@media (max-width: 1200px) {
+  .hero-inner { grid-template-columns: 1fr 360px; gap: 36px; }
+  .foot-inner { grid-template-columns: 1.6fr 1fr 1fr 1.3fr; gap: 28px; }
+  .why-inner  { gap: 48px; }
+  .faq-inner  { gap: 48px; }
+}
+
+/* --- 1024px: collapse some 2-col layouts --- */
+@media (max-width: 1024px) {
+  .desk-nav { display: none; }
+  .ham      { display: flex; }
+  .call-btn  { display: none; } /* shown in mobile nav instead */
+
+  .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+  .hero h1    { font-size: clamp(1.9rem, 5vw, 2.8rem); }
+  .hero-sub   { max-width: 100%; }
+  .book-card  { max-width: 520px; /* center-ish on tablets */ }
+
+  .svc-grid       { grid-template-columns: repeat(2,1fr); }
+  .cond-grid      { grid-template-columns: repeat(2,1fr); }
+  .why-inner      { grid-template-columns: 1fr; gap: 48px; }
+  .why-vis        { padding-bottom: 48px; }
+  .haids-inner    { grid-template-columns: 1fr; gap: 40px; }
+  .docs-grid      { grid-template-columns: repeat(2,1fr); }
+  .testi-grid     { grid-template-columns: repeat(2,1fr); }
+  .faq-inner      { grid-template-columns: 1fr; gap: 36px; }
+  .abt-inner      { grid-template-columns: 1fr; gap: 40px; }
+  .contact-inner  { grid-template-columns: 1fr; gap: 44px; }
+  .foot-inner     { grid-template-columns: 1fr 1fr; gap: 36px; }
+  .foot-bot       { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .htest-grid     { grid-template-columns: 1fr; }
+}
+
+/* --- 768px: tablet portrait --- */
+@media (max-width: 768px) {
+  .wrap { padding: 0 16px; }
+  .sec  { padding: 60px 0; }
+
+  .topbar-inner { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .tb-right     { gap: 14px; }
+
+  /* Header: keep logo + hamburger only */
+  .hdr-inner    { padding: 12px 0; }
+  .logo-txt .nm { font-size: .88rem; }
+  .logo-txt .tg { display: none; }
+
+  .hero         { padding: 52px 0 0; }
+  .hero h1      { font-size: clamp(1.7rem, 6vw, 2.4rem); }
+  .hero-ctas    { gap: 10px; }
+  .hero-stats   { gap: 18px; }
+  .hstat .num   { font-size: 1.7rem; }
+  .trust-inner  { gap: 18px; font-size: .78rem; }
+
+  .book-card    { max-width: 100%; padding: 24px 18px; }
+
+  .svc-grid     { grid-template-columns: 1fr; }
+  .cond-grid    { grid-template-columns: repeat(2,1fr); }
+  .docs-grid    { grid-template-columns: 1fr; }
+  .testi-grid   { grid-template-columns: 1fr; }
+  .htest-grid   { grid-template-columns: 1fr; }
+  .ha-types     { grid-template-columns: 1fr 1fr; }
+
+  .why-float    { right: 16px; padding: 14px 16px; }
+  .why-float .big { font-size: 1.5rem; }
+  .why-badges   { flex-wrap: wrap; }
+
+  .frow { grid-template-columns: 1fr; }
+
+  .abt-creds    { gap: 10px; }
+
+  .foot-inner   { grid-template-columns: 1fr; gap: 32px; }
+
+  .cta-btns     { flex-direction: column; align-items: center; }
+  .cta-btns .btn { width: min(280px, 100%); justify-content: center; }
+}
+
+/* --- 480px: large phones --- */
+@media (max-width: 480px) {
+  .wrap { padding: 0 14px; }
+  .sec  { padding: 48px 0; }
+
+  .topbar { display: none; } /* hide topbar on small phones to save space */
+
+  .logo-ico { width: 38px; height: 38px; border-radius: 9px; }
+  .logo-ico svg { width: 20px; height: 20px; }
+
+  h2.ttl    { font-size: 1.55rem; }
+  p.sub     { font-size: .9rem; }
+
+  .hero        { padding: 44px 0 0; }
+  .hero h1     { font-size: 1.65rem; }
+  .hero-badge  { font-size: .72rem; padding: 5px 12px; }
+  .hero-sub    { font-size: .9rem; }
+  .hero-ctas   { flex-direction: column; gap: 10px; }
+  .hero-ctas .btn { width: 100%; justify-content: center; }
+  .hero-stats  { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  .hstat .num  { font-size: 1.6rem; }
+
+  .trust-inner { flex-direction: column; align-items: flex-start; gap: 10px; }
+
+  .book-card   { padding: 20px 14px; border-radius: 16px; }
+  .book-card h3 { font-size: 1.05rem; }
+
+  .svc-card    { padding: 22px 18px; }
+  .cond-grid   { grid-template-columns: 1fr; }
+  .ha-types    { grid-template-columns: 1fr; }
+  .docs-grid   { grid-template-columns: 1fr; }
+  .testi-grid  { grid-template-columns: 1fr; }
+  .htest-grid  { grid-template-columns: 1fr; }
+
+  .why-main    { padding: 28px 24px; }
+  .why-num     { font-size: 3rem; }
+  .why-badges  { flex-direction: column; }
+  .why-float   { position: static; margin-top: 16px; display: inline-block; border-radius: 12px; }
+  .why-vis     { padding-bottom: 0; }
+
+  .faq-inner   { gap: 28px; }
+  .fq          { font-size: .84rem; padding: 15px 16px; }
+  .fa          { padding: 0 16px; }
+  .fi.open .fa { padding: 0 16px 16px; }
+
+  .abt-vis     { padding: 28px 22px; }
+  .abt-creds   { flex-direction: column; }
+  .acred       { min-width: auto; }
+
+  .ci          { padding: 14px; }
+  .ci-ico      { width: 36px; height: 36px; }
+
+  .cta-ban     { padding: 48px 0; }
+
+  .foot-inner  { gap: 28px; }
+  .foot-bot    { font-size: .72rem; }
+  .seo         { display: none; } /* hide dense SEO line on tiny screens */
+}
+
+/* --- 360px: small phones --- */
+@media (max-width: 360px) {
+  .wrap     { padding: 0 12px; }
+  .hero h1  { font-size: 1.45rem; }
+  .hero-stats { grid-template-columns: 1fr 1fr; }
+  .btn      { padding: 11px 18px; font-size: .84rem; }
+  .docs-grid { grid-template-columns: 1fr; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- ══════════ TOP BAR ══════════ -->
+<div class="topbar">
+  <div class="wrap">
+    <div class="topbar-inner">
+      <div class="tb-left">
+        <span class="tb-item">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
+          Begusarai, Bihar, India
+        </span>
+        <span class="tb-item">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
+          Mon–Sat: 10 AM – 6 PM &nbsp;|&nbsp; Sunday Closed
+        </span>
+      </div>
+      <div class="tb-right">
+        <a href="tel:+910123456789" class="tb-item">
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          +91 0123456789
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ HEADER ══════════ -->
+<header>
+  <div class="wrap">
+    <div class="hdr-inner">
+
+      <a href="#home" class="logo">
+        <div class="logo-ico">
+          <svg viewBox="0 0 32 32"><path d="M16 4C9.4 4 4 9.4 4 16s5.4 12 12 12 12-5.4 12-12S22.6 4 16 4zm-2 17v-5H9l7-10v5h5l-7 10z"/></svg>
+        </div>
+        <div class="logo-txt">
+          <div class="nm">Advanced Speech &amp; Hearing</div>
+          <div class="tg">Centre — Begusarai, Bihar</div>
+        </div>
+      </a>
+
+      <nav class="desk-nav">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#hearing-aids">Hearing Aids</a>
+        <a href="#doctors">Our Team</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="hdr-cta">
+        <a href="tel:+910123456789" class="call-btn">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call Now
+        </a>
+        <a href="#book" class="btn btn-p" style="display:none" id="hdrBook">Book Appointment</a>
+        <button class="ham" id="menuBtn" aria-label="Open menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+</header>
+
+<!-- ══════════ MOBILE DRAWER ══════════ -->
+<div class="mob-nav" id="mobNav">
+  <div class="mob-panel">
+    <div class="mob-head">
+      <span class="mob-logo-txt">Advanced Speech &amp; Hearing</span>
+      <button class="mob-close" id="mobClose" aria-label="Close menu">✕</button>
+    </div>
+    <a href="#home">🏠 Home</a>
+    <a href="#about">ℹ️ About Us</a>
+    <a href="#services">🔬 Services</a>
+    <a href="#hearing-aids">👂 Hearing Aids</a>
+    <a href="#doctors">👨‍⚕️ Our Team</a>
+    <a href="#conditions">💊 Conditions</a>
+    <a href="#faq">❓ FAQ</a>
+    <a href="#contact">📍 Contact</a>
+    <div style="padding: 16px 0 8px; border-top: 1px solid var(--border); margin-top: 8px;">
+      <a href="tel:+910123456789" style="display:flex;align-items:center;gap:8px;font-weight:700;color:var(--teal-deep);padding:10px 14px;">
+        📞 +91 0123456789
+      </a>
+      <a href="#book" class="btn btn-p mob-cta" style="width:100%;justify-content:center;margin-top:8px;">Book Appointment</a>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" id="home">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+  <div class="wrap">
+    <div class="hero-inner">
+
+      <!-- Left: copy -->
+      <div>
+        <div class="hero-badge"><span class="dot"></span> Bihar's Trusted Speech &amp; Hearing Clinic</div>
+        <h1>Safe &amp; Caring<br><em>Speech and Hearing</em><br>Care for Your Family</h1>
+        <p class="hero-sub">From newborn hearing screenings to premium hearing aids, and from speech therapy for autism to voice disorder treatment — expert, compassionate care right here in Begusarai, Bihar.</p>
+        <div class="hero-ctas">
+          <a href="#book" class="btn btn-w">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Book Free Consultation
+          </a>
+          <a href="tel:+910123456789" class="btn btn-ghost">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            +91 0123456789
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="hstat"><div class="num">1,500+</div><div class="lbl">Happy Patients</div></div>
+          <div class="hstat"><div class="num">8+</div><div class="lbl">Years of Care</div></div>
+          <div class="hstat"><div class="num">4.9★</div><div class="lbl">Google Rating</div></div>
+          <div class="hstat"><div class="num">100%</div><div class="lbl">Certified Experts</div></div>
+        </div>
+      </div>
+
+      <!-- Right: booking form -->
+      <div class="book-card" id="book">
+        <h3>Book an Appointment</h3>
+        <p>Our team will call you within 2 hours to confirm.</p>
+        <form onsubmit="handleSubmit(event)">
+          <div class="fg"><label>Full Name *</label><input type="text" placeholder="Your full name" required></div>
+          <div class="fg"><label>Phone Number *</label><input type="tel" placeholder="+91 XXXXX XXXXX" required></div>
+          <div class="fg"><label>Your City / Location</label><input type="text" placeholder="e.g. Begusarai, Patna, Darbhanga"></div>
+          <div class="fg">
+            <label>Service Required</label>
+            <select>
+              <option value="">Select a service</option>
+              <option>Hearing Test (OAE / BERA / PTA)</option>
+              <option>Hearing Aid Trial &amp; Fitting</option>
+              <option>Speech Therapy for Child</option>
+              <option>Autism / Developmental Assessment</option>
+              <option>Voice Disorder Treatment</option>
+              <option>Stuttering Therapy</option>
+              <option>General Consultation</option>
+            </select>
+          </div>
+          <div class="fg"><label>Your Query (Optional)</label><textarea placeholder="Briefly describe your concern..."></textarea></div>
+          <button type="submit" class="btn btn-p btn-full">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22,2 15,22 11,13 2,9"/></svg>
+            Request Appointment
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Trust bar -->
+  <div class="trust-bar">
+    <div class="wrap">
+      <div class="trust-inner">
+        <div class="ti"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg> RCI Certified Audiologists</div>
+        <div class="ti"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg> Advanced Diagnostic Equipment</div>
+        <div class="ti"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg> Individualised Care Plans</div>
+        <div class="ti"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg> Same-Week Appointments</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CORE SERVICES ══════════ -->
+<section class="svc-strip sec-sm" id="services">
+  <div class="wrap">
+    <div class="text-c" style="margin-bottom:36px">
+      <span class="chip">What We Offer</span>
+      <h2 class="ttl">Comprehensive Speech &amp; Hearing Services</h2>
+      <p class="sub">We bring specialist-level audiology and speech-language pathology to Begusarai — no need to travel to a distant city.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc-card fu">
+        <div class="svc-ico"><svg width="26" height="26" fill="none" stroke="#0d7377" stroke-width="1.8" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
+        <h3>Hearing Tests &amp; Diagnostics</h3>
+        <p>Full audiological evaluation including OAE, BERA/ABR, Pure Tone Audiometry (PTA), and Immittance/Tympanometry for all ages — newborns to seniors.</p>
+        <a href="#hearing-tests" class="svc-lnk">Learn More →</a>
+      </div>
+      <div class="svc-card fu">
+        <div class="svc-ico"><svg width="26" height="26" fill="none" stroke="#0d7377" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/><path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/></svg></div>
+        <h3>Speech &amp; Language Therapy</h3>
+        <p>Expert therapy for autism, cerebral palsy, intellectual disability, stuttering, voice disorders, and misarticulation — using evidence-based, play-focused methods.</p>
+        <a href="#conditions" class="svc-lnk">Learn More →</a>
+      </div>
+      <div class="svc-card fu">
+        <div class="svc-ico"><svg width="26" height="26" fill="none" stroke="#0d7377" stroke-width="1.8" viewBox="0 0 24 24"><path d="M3 18v-6a9 9 0 0118 0v6"/><path d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"/></svg></div>
+        <h3>Hearing Aid Trial &amp; Fitting</h3>
+        <p>Free trial of premium digital hearing aids. Our audiologist recommends the right style (BTE, ITE, CIC, RIC) for your hearing loss and lifestyle.</p>
+        <a href="#hearing-aids" class="svc-lnk">Learn More →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ WHY CHOOSE US ══════════ -->
+<section class="why sec" id="about">
+  <div class="wrap">
+    <div class="why-inner">
+
+      <div class="why-vis fu">
+        <div class="why-main">
+          <div class="why-num">8+</div>
+          <div class="why-lbl">Years Serving Bihar Families</div>
+          <div class="why-sub">Trusted by patients across Begusarai, Darbhanga, Samastipur &amp; Muzaffarpur.</div>
+        </div>
+        <div class="why-float">
+          <div class="big">4.9 ★</div>
+          <div class="small">Google Verified Rating</div>
+        </div>
+        <div class="why-badges">
+          <div class="mbadge"><div class="num">1,500+</div><div class="lbl">Patients Helped</div></div>
+          <div class="mbadge"><div class="num">7</div><div class="lbl">Conditions</div></div>
+          <div class="mbadge"><div class="num">4</div><div class="lbl">Diagnostic Tests</div></div>
+        </div>
+      </div>
+
+      <div>
+        <span class="chip">Why Choose Us</span>
+        <h2 class="ttl">Expert Care, Right Here in Begusarai</h2>
+        <p class="sub">You shouldn't have to travel to Patna or Delhi for quality speech and hearing care. We bring world-class diagnostics and therapy to your hometown.</p>
+        <div class="why-feats">
+          <div class="wf fu">
+            <div class="wf-ico"><svg width="20" height="20" fill="none" stroke="#0d7377" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+            <div>
+              <h4>RCI-Certified Audiologists &amp; SLPs</h4>
+              <p>All our professionals are registered with the Rehabilitation Council of India (RCI) — India's gold standard for allied health.</p>
+            </div>
+          </div>
+          <div class="wf fu">
+            <div class="wf-ico"><svg width="20" height="20" fill="none" stroke="#0d7377" stroke-width="2" viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg></div>
+            <div>
+              <h4>Advanced Diagnostic Equipment</h4>
+              <p>Clinic-grade audiometers, OAE screeners &amp; BERA systems — the same technology found in premier metro hospitals.</p>
+            </div>
+          </div>
+          <div class="wf fu">
+            <div class="wf-ico"><svg width="20" height="20" fill="none" stroke="#0d7377" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div>
+            <div>
+              <h4>Child-Friendly, Compassionate Approach</h4>
+              <p>Play-based techniques and full parental involvement at every stage — because family is the best therapy partner.</p>
+            </div>
+          </div>
+          <div class="wf fu">
+            <div class="wf-ico"><svg width="20" height="20" fill="none" stroke="#0d7377" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg></div>
+            <div>
+              <h4>Individualised Treatment Plans</h4>
+              <p>Personalised care plan after thorough assessment, reviewed with the family at every milestone.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONDITIONS WE TREAT ══════════ -->
+<section class="cond sec" id="conditions">
+  <div class="wrap">
+    <div class="text-c">
+      <span class="chip">Conditions We Treat</span>
+      <h2 class="ttl">Specialised Care for Every Need</h2>
+      <p class="sub">Our team has deep expertise across a broad spectrum of communication and hearing disorders for all age groups.</p>
+    </div>
+    <div class="cond-grid">
+      <div class="cc fu"><span class="emo">🧩</span><h3>Autism Spectrum Disorder</h3><p>Customised speech and communication therapy to build language, social skills &amp; expressive ability. Early intervention yields the best results.</p><span class="cc-tag">Speech Therapy</span></div>
+      <div class="cc fu"><span class="emo">🧠</span><h3>Intellectual Disability</h3><p>Patient, structured, repetition-based language therapy for children with cognitive difficulties to develop functional communication.</p><span class="cc-tag">Speech Therapy</span></div>
+      <div class="cc fu"><span class="emo">🤸</span><h3>Cerebral Palsy</h3><p>Integrated therapy addressing motor-speech challenges including dysarthria and oromotor difficulties to maximise communication potential.</p><span class="cc-tag">Speech Therapy</span></div>
+      <div class="cc fu"><span class="emo">👂</span><h3>Hearing Impairment</h3><p>Comprehensive evaluation (PTA, BERA, OAE), hearing aid fitting, and auditory-verbal therapy for children and adults with any degree of loss.</p><span class="cc-tag">Audiology</span></div>
+      <div class="cc fu"><span class="emo">🗣️</span><h3>Voice Disorders</h3><p>Assessment and voice therapy for hoarseness, vocal nodules, functional dysphonia &amp; other disorders affecting teachers, singers &amp; professionals.</p><span class="cc-tag">Voice Therapy</span></div>
+      <div class="cc fu"><span class="emo">💬</span><h3>Misarticulation</h3><p>Targeted articulation therapy for children who substitute, omit, or distort speech sounds — helping them speak clearly and confidently.</p><span class="cc-tag">Speech Therapy</span></div>
+      <div class="cc fu"><span class="emo">🔄</span><h3>Stuttering &amp; Fluency</h3><p>Evidence-based fluency therapy using prolonged speech, diaphragmatic breathing &amp; desensitisation to improve communication confidence.</p><span class="cc-tag">Fluency Therapy</span></div>
+      <div class="cc fu" style="background:linear-gradient(135deg,var(--teal-pale),var(--off-white));border-color:var(--teal-mid);display:flex;flex-direction:column;align-items:center;text-align:center;justify-content:center">
+        <span class="emo" style="font-size:2.2rem">💙</span>
+        <h3>Not Sure?</h3>
+        <p style="font-size:.8rem">Book a free consultation and our specialists will guide you on the right path.</p>
+        <a href="#book" class="btn btn-p" style="margin-top:14px;font-size:.8rem;padding:10px 20px">Book Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ HEARING TESTS ══════════ -->
+<section class="htests sec" id="hearing-tests">
+  <div class="wrap">
+    <div class="text-c">
+      <span class="chip">Audiological Diagnostics</span>
+      <h2 class="ttl">Hearing Tests We Provide</h2>
+      <p class="sub">Accurate diagnosis is the foundation of good hearing care. We use internationally recognised tests for every age.</p>
+    </div>
+    <div class="htest-grid">
+      <div class="htc htc-1 fu">
+        <div class="htc-abbr">OAE</div>
+        <div class="htc-badge">Newborn &amp; Infant Screening</div>
+        <h3>Otoacoustic Emissions (OAE)</h3>
+        <p>A painless, quick test measuring the response of hair cells inside the cochlea. Ideal for newborn hearing screening. Results available in minutes — no active response required from the patient.</p>
+        <div class="htc-ideal">✅ Ideal for: Newborns &amp; infants under 6 months</div>
+      </div>
+      <div class="htc htc-2 fu">
+        <div class="htc-abbr">BERA</div>
+        <div class="htc-badge">Objective Brain-Stem Test</div>
+        <h3>BERA / ABR Test</h3>
+        <p>Measures brainwave activity in response to sound without any active participation — perfect for young children or those with developmental delays. Safe and completely non-invasive.</p>
+        <div class="htc-ideal">✅ Ideal for: Infants, children, non-cooperative patients</div>
+      </div>
+      <div class="htc htc-3 fu">
+        <div class="htc-abbr">PTA</div>
+        <div class="htc-badge">Standard Hearing Evaluation</div>
+        <h3>Pure Tone Audiometry (PTA)</h3>
+        <p>The gold-standard hearing test. You listen to tones at different pitches via headphones; your responses plot an audiogram showing the exact nature and degree of hearing loss.</p>
+        <div class="htc-ideal">✅ Ideal for: Adults &amp; children above 4 years</div>
+      </div>
+      <div class="htc htc-4 fu">
+        <div class="htc-abbr">IMM</div>
+        <div class="htc-badge">Middle Ear Assessment</div>
+        <h3>Immittance / Tympanometry</h3>
+        <p>Assesses eardrum health and middle ear movement. Diagnoses fluid in the ear (glue ear), ear infections &amp; Eustachian tube dysfunction — common causes of hearing loss in children.</p>
+        <div class="htc-ideal">✅ Ideal for: All ages with repeated ear infections</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ HEARING AIDS ══════════ -->
+<section class="haids sec" id="hearing-aids">
+  <div class="wrap">
+    <div class="haids-inner">
+
+      <div class="fu">
+        <span class="chip">Hearing Aid Services</span>
+        <h2 class="ttl">Premium Hearing Aids in Begusarai</h2>
+        <p class="sub">Free trial before you commit. Our audiologist matches the right device to your audiogram, lifestyle &amp; budget.</p>
+        <div class="ha-types">
+          <div class="ha-t"><div class="ha-abbr">BTE</div><h4>Behind-the-Ear</h4><p>Powerful &amp; durable. Best for severe to profound hearing loss. Suitable for all ages including children.</p></div>
+          <div class="ha-t"><div class="ha-abbr">RIC</div><h4>Receiver-in-Canal</h4><p>Slim, discreet, natural sound. Ideal for mild to moderately-severe hearing loss.</p></div>
+          <div class="ha-t"><div class="ha-abbr">ITE</div><h4>In-the-Ear</h4><p>Custom-moulded. Easy to handle, good for mild-to-moderate loss.</p></div>
+          <div class="ha-t"><div class="ha-abbr">CIC</div><h4>Completely-in-Canal</h4><p>Nearly invisible. Best for mild to moderate loss in active adults.</p></div>
+        </div>
+      </div>
+
+      <div class="fu">
+        <h3 style="font-size:1.35rem;margin-bottom:8px">Our 4-Step Hearing Aid Process</h3>
+        <p style="color:var(--text-body);font-size:.87rem;margin-bottom:24px">We make sure you get the right aid — no pressure, no rush.</p>
+        <div class="ha-steps">
+          <div class="ha-step"><div class="step-num">1</div><div><h4>Comprehensive Hearing Assessment</h4><p>Full PTA &amp; immittance test to understand the type and degree of your hearing loss.</p></div></div>
+          <div class="ha-step"><div class="step-num">2</div><div><h4>Recommendation &amp; Counselling</h4><p>Audiologist explains your options, recommends devices &amp; answers all questions without pressure.</p></div></div>
+          <div class="ha-step"><div class="step-num">3</div><div><h4>Free Trial Period</h4><p>Try your recommended hearing aid in real life before making any purchase decision.</p></div></div>
+          <div class="ha-step"><div class="step-num">4</div><div><h4>Fitting, Fine-Tuning &amp; Follow-Up</h4><p>Custom fitting, programming &amp; scheduled follow-up appointments for ongoing adjustments.</p></div></div>
+        </div>
+        <a href="#book" class="btn btn-p" style="margin-top:28px">Book Hearing Aid Trial</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ DOCTORS ══════════ -->
+<section class="docs sec" id="doctors">
+  <div class="wrap">
+    <div class="text-c">
+      <span class="chip">Our Expert Team</span>
+      <h2 class="ttl">Meet Your Specialists</h2>
+      <p class="sub">Our qualified and compassionate team is dedicated to improving quality of life for every patient and family we serve.</p>
+    </div>
+    <div class="docs-grid">
+      <div class="dc fu">
+        <div class="dc-photo"><div class="dc-avatar"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z"/></svg></div></div>
+        <div class="dc-info">
+          <div class="dc-tag">Lead Audiologist</div>
+          <h3>Dr. [Name]</h3>
+          <div class="deg">M.Sc. Audiology &amp; Speech-Language Pathology | RCI Registered</div>
+          <p>8+ years of clinical experience in paediatric audiology, BERA testing &amp; hearing aid dispensing across Bihar.</p>
+        </div>
+      </div>
+      <div class="dc fu">
+        <div class="dc-photo"><div class="dc-avatar"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z"/></svg></div></div>
+        <div class="dc-info">
+          <div class="dc-tag">Senior Speech-Language Pathologist</div>
+          <h3>Ms. [Name]</h3>
+          <div class="deg">M.Sc. Speech-Language Pathology | RCI Registered</div>
+          <p>Specialises in therapy for autism spectrum disorder, cerebral palsy &amp; childhood stuttering. Known for a warm, child-friendly approach.</p>
+        </div>
+      </div>
+      <div class="dc fu">
+        <div class="dc-photo"><div class="dc-avatar"><svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2M12 11a4 4 0 100-8 4 4 0 000 8z"/></svg></div></div>
+        <div class="dc-info">
+          <div class="dc-tag">Audiologist &amp; Hearing Aid Specialist</div>
+          <h3>Mr. [Name]</h3>
+          <div class="deg">B.Sc. Audiology | RCI Registered</div>
+          <p>Expert in adult hearing rehabilitation, hearing aid fitting &amp; fine-tuning, and occupational audiological screening programmes.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ TESTIMONIALS ══════════ -->
+<section class="testi sec">
+  <div class="wrap">
+    <div class="text-c">
+      <span class="chip">Patient Stories</span>
+      <h2 class="ttl">Families Who Trust Us</h2>
+      <p class="sub">Hear from parents and patients whose lives have been transformed by the care at our centre.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="tc fu">
+        <div class="stars">★★★★★</div>
+        <p>"My 4-year-old son was diagnosed with autism and barely spoke a word. After 6 months of speech therapy here, he can say full sentences. The therapist's patience is beyond anything I expected. So grateful to have this centre right in Begusarai."</p>
+        <div class="ta"><div class="tav">P</div><div><div class="ta-name">Priya Sharma</div><div class="ta-detail">Parent of autistic child, Begusarai</div></div></div>
+      </div>
+      <div class="tc fu">
+        <div class="stars">★★★★★</div>
+        <p>"My father (68) had been struggling with hearing loss for 3 years. The audiologist explained everything patiently, gave us a free trial, and now he uses his BTE hearing aid daily. His quality of life has improved dramatically."</p>
+        <div class="ta"><div class="tav">R</div><div><div class="ta-name">Rahul Kumar</div><div class="ta-detail">Son of hearing aid patient, Samastipur</div></div></div>
+      </div>
+      <div class="tc fu">
+        <div class="stars">★★★★★</div>
+        <p>"My daughter was stuttering badly in class. Within 4 months of fluency therapy, her stutter has reduced by 80%. She's now active in school events and much more confident. The therapist also coached us on how to support her at home."</p>
+        <div class="ta"><div class="tav">A</div><div><div class="ta-name">Anjali Devi</div><div class="ta-detail">Parent, Begusarai</div></div></div>
+      </div>
+      <div class="tc fu">
+        <div class="stars">★★★★★</div>
+        <p>"The BERA test for my newborn was done very professionally. The doctor explained results clearly and referred us for follow-up immediately. Very reassured by the calm, expert approach during a stressful situation."</p>
+        <div class="ta"><div class="tav">S</div><div><div class="ta-name">Sunita Gupta</div><div class="ta-detail">New mother, Darbhanga</div></div></div>
+      </div>
+      <div class="tc fu">
+        <div class="stars">★★★★★</div>
+        <p>"I'm a school teacher and had developed a voice disorder — my voice cracked after every class. After two months of voice therapy exercises, my voice is strong again. Highly recommend this centre!"</p>
+        <div class="ta"><div class="tav">M</div><div><div class="ta-name">Meena Pandey</div><div class="ta-detail">School Teacher, Muzaffarpur</div></div></div>
+      </div>
+      <div class="tc fu">
+        <div class="stars">★★★★★</div>
+        <p>"My child with cerebral palsy has made remarkable communication progress over 8 months. Therapy uses toys and games that are enjoyable. The best clinic in the entire Begusarai–Darbhanga region."</p>
+        <div class="ta"><div class="tav">V</div><div><div class="ta-name">Vikram Singh</div><div class="ta-detail">Parent, Khagaria</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FAQ ══════════ -->
+<section class="faq sec" id="faq">
+  <div class="wrap">
+    <div class="faq-inner">
+
+      <div>
+        <span class="chip">Have Questions?</span>
+        <h2 class="ttl">Frequently Asked Questions</h2>
+        <p style="color:var(--text-body);line-height:1.72;margin-top:14px;margin-bottom:28px;font-size:.92rem">We've answered the most common questions below. Still unsure? Call us and we'll be happy to help.</p>
+        <a href="tel:+910123456789" class="btn btn-p">
+          <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          Call Us Now
+        </a>
+      </div>
+
+      <div class="faq-list">
+        <div class="fi">
+          <button class="fq" onclick="toggleFaq(this)">At what age should I get my child's hearing tested?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg></button>
+          <div class="fa">Ideally every newborn should have an OAE screening in the first month. If your child doesn't respond to sounds, hasn't spoken any words by 12 months, or you have any concern — get a hearing test immediately. Early detection dramatically improves outcomes.</div>
+        </div>
+        <div class="fi">
+          <button class="fq" onclick="toggleFaq(this)">How long does speech therapy take to show results?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg></button>
+          <div class="fa">Duration varies by condition and severity. Mild misarticulation may resolve in 3–6 months. Autism and cerebral palsy require longer therapy but significant improvements are often seen within 6–12 months. Home practice and parental involvement are key.</div>
+        </div>
+        <div class="fi">
+          <button class="fq" onclick="toggleFaq(this)">What happens during a PTA hearing test?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg></button>
+          <div class="fa">A PTA is painless and takes about 20–30 minutes. You sit in a soundproof booth, wear headphones, and press a button when you hear a tone. The audiologist tests different frequencies to produce an audiogram showing your hearing ability at each pitch.</div>
+        </div>
+        <div class="fi">
+          <button class="fq" onclick="toggleFaq(this)">Is speech therapy effective for adults who stutter?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg></button>
+          <div class="fa">Yes. Adult stuttering significantly improves with structured fluency therapy using prolonged speech, controlled breathing &amp; cognitive approaches. Patients report greater communication confidence in social and professional settings.</div>
+        </div>
+        <div class="fi">
+          <button class="fq" onclick="toggleFaq(this)">Can I try a hearing aid before buying?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg></button>
+          <div class="fa">Yes! We offer free hearing aid trials. After a full hearing assessment, we fit you with a suitable device and you try it in real-life situations before making any financial commitment. There is absolutely no pressure to purchase.</div>
+        </div>
+        <div class="fi">
+          <button class="fq" onclick="toggleFaq(this)">What is a BERA test and is it safe for infants?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg></button>
+          <div class="fa">BERA is completely safe and non-invasive. Small electrodes are placed on the baby's scalp and sounds are played through tiny earphones. Brain responses are recorded while the infant sleeps naturally or under mild sedation. No risk whatsoever.</div>
+        </div>
+        <div class="fi">
+          <button class="fq" onclick="toggleFaq(this)">Do you provide therapy for children with cerebral palsy?<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6,9 12,15 18,9"/></svg></button>
+          <div class="fa">Yes. We provide specialised speech &amp; oromotor therapy for CP including improving mouth/tongue movements, swallowing therapy (dysphagia), alternative communication (AAC), and oral muscle strengthening — all adapted to the child's abilities.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ ABOUT ══════════ -->
+<section class="abt sec" id="about-section">
+  <div class="wrap">
+    <div class="abt-inner">
+
+      <div class="abt-vis fu">
+        <h3>Our Mission &amp; Vision</h3>
+        <p>To provide the highest quality, evidence-based audiology and speech-language therapy services to the people of Begusarai and Bihar — with compassion, dignity, and a deep commitment to every patient's progress.</p>
+        <div class="abt-vals">
+          <div class="av"><div class="av-icon">🎯</div><div><h4>Evidence-Based Practice</h4><p>Globally validated assessment tools &amp; therapy protocols tailored for Indian children and adults.</p></div></div>
+          <div class="av"><div class="av-icon">🤝</div><div><h4>Family-Centred Care</h4><p>Parents and caregivers are active partners — because progress happens at home too.</p></div></div>
+          <div class="av"><div class="av-icon">♿</div><div><h4>Accessible Healthcare</h4><p>World-class care available to all families — not just those who can travel to metro cities.</p></div></div>
+        </div>
+      </div>
+
+      <div class="fu">
+        <span class="chip">About the Centre</span>
+        <h2 class="ttl">Bringing Specialist Care to Begusarai</h2>
+        <p style="color:var(--text-body);line-height:1.75;margin-bottom:18px;font-size:.92rem">Advanced Speech &amp; Hearing Centre was founded with a singular vision: to ensure no child in Bihar misses the window of early intervention due to lack of local access to specialist audiologists and speech therapists.</p>
+        <p style="color:var(--text-body);line-height:1.75;margin-bottom:18px;font-size:.92rem">We are the region's leading clinic for comprehensive audiology and speech-language pathology, using the same advanced diagnostic technology found in premier hospitals in Delhi and Mumbai — right here in Begusarai.</p>
+        <p style="color:var(--text-body);line-height:1.75;margin-bottom:28px;font-size:.92rem">Whether you're a parent concerned about your child's speech, an adult experiencing hearing loss, or a senior looking for the right hearing aid — we are here for you, every step of the way.</p>
+        <div class="abt-creds">
+          <div class="acred acred-rci"><div class="big">RCI</div><div class="sm">Registered Professionals</div></div>
+          <div class="acred acred-iso"><div class="big">ISO</div><div class="sm">Standard Equipment</div></div>
+          <div class="acred acred-yr"><div class="big">8yr</div><div class="sm">Clinical Experience</div></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CTA BANNER ══════════ -->
+<section class="cta-ban">
+  <div class="wrap">
+    <h2>Start Your Journey to Better Hearing &amp; Communication Today</h2>
+    <p>Early diagnosis and treatment make a world of difference. Contact the best speech &amp; hearing clinic in Begusarai today.</p>
+    <div class="cta-btns">
+      <a href="#book" class="btn btn-w">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        Book Free Consultation
+      </a>
+      <a href="tel:+910123456789" class="btn btn-ghost">
+        Call +91 0123456789
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ CONTACT ══════════ -->
+<section class="contact sec" id="contact">
+  <div class="wrap">
+    <div class="contact-inner">
+
+      <div class="contact-info">
+        <span class="chip">Get In Touch</span>
+        <h3 class="ttl">Visit Us or Call Us</h3>
+        <p class="lead">We welcome walk-ins, but an appointment ensures dedicated time with our specialist without waiting.</p>
+        <div class="ci-list">
+          <div class="ci">
+            <div class="ci-ico"><svg width="18" height="18" fill="none" stroke="#0d7377" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg></div>
+            <div><h4>Address</h4><p>Advanced Speech &amp; Hearing Centre<br>Begusarai, Bihar — 851101, India</p></div>
+          </div>
+          <div class="ci">
+            <div class="ci-ico"><svg width="18" height="18" fill="none" stroke="#0d7377" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
+            <div><h4>Phone</h4><a href="tel:+910123456789">+91 0123456789</a></div>
+          </div>
+          <div class="ci">
+            <div class="ci-ico"><svg width="18" height="18" fill="none" stroke="#0d7377" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg></div>
+            <div><h4>Clinic Hours</h4><p>Mon – Sat: 10:00 AM – 6:00 PM<br><span style="color:#e74c3c;font-weight:600">Sunday: Closed</span></p></div>
+          </div>
+        </div>
+        <div class="map-box">
+          <svg fill="none" stroke="#0d7377" stroke-width="1.5" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
+          <p>📍 Advanced Speech &amp; Hearing Centre, Begusarai, Bihar</p>
+          <small style="font-size:.72rem;opacity:.55">Embed your Google Maps &lt;iframe&gt; here</small>
+        </div>
+      </div>
+
+      <div class="cform-wrap">
+        <span class="chip">Appointment Request</span>
+        <h3 class="ttl">Book an Appointment</h3>
+        <p class="lead">Fill in the form and our team will confirm your slot within 2 hours during clinic hours.</p>
+        <form onsubmit="handleSubmit(event)">
+          <div class="frow">
+            <div class="fg"><label>First Name *</label><input type="text" placeholder="First name" required></div>
+            <div class="fg"><label>Last Name *</label><input type="text" placeholder="Last name" required></div>
+          </div>
+          <div class="frow">
+            <div class="fg"><label>Phone Number *</label><input type="tel" placeholder="+91 XXXXX XXXXX" required></div>
+            <div class="fg"><label>Patient Age</label><input type="text" placeholder="e.g. 4 years / 65 years"></div>
+          </div>
+          <div class="fg"><label>Your City / Location *</label><input type="text" placeholder="e.g. Begusarai, Darbhanga" required></div>
+          <div class="fg">
+            <label>Service Required</label>
+            <select>
+              <option value="">Select a service</option>
+              <option>Hearing Test (OAE / BERA / PTA)</option>
+              <option>Hearing Aid Trial &amp; Fitting</option>
+              <option>Speech Therapy for Child</option>
+              <option>Autism / ASD Therapy</option>
+              <option>Cerebral Palsy Therapy</option>
+              <option>Stuttering / Fluency Therapy</option>
+              <option>Voice Disorder Treatment</option>
+              <option>General Consultation</option>
+            </select>
+          </div>
+          <div class="fg"><label>Preferred Date (Optional)</label><input type="date"></div>
+          <div class="fg"><label>Describe Your Concern</label><textarea placeholder="Please share any details about the patient's condition or what you are looking for..."></textarea></div>
+          <button type="submit" class="btn btn-p btn-full">
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22,2 15,22 11,13 2,9"/></svg>
+            Send Appointment Request
+          </button>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer>
+  <div class="wrap">
+    <div class="foot-inner">
+      <div class="foot-brand">
+        <div class="foot-logo">
+          <div class="foot-logo-ico"><svg viewBox="0 0 32 32"><path d="M16 4C9.4 4 4 9.4 4 16s5.4 12 12 12 12-5.4 12-12S22.6 4 16 4zm-2 17v-5H9l7-10v5h5l-7 10z"/></svg></div>
+          <div class="foot-logo-nm">Advanced Speech &amp; Hearing Centre</div>
+        </div>
+        <p>Bihar's trusted clinic for comprehensive audiology, speech-language therapy, and hearing aid services. Serving Begusarai, Darbhanga, Samastipur &amp; surrounding districts.</p>
+        <a href="tel:+910123456789" class="foot-phone">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+          +91 0123456789
+        </a>
+      </div>
+
+      <div class="foot-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#hearing-tests">OAE Screening</a></li>
+          <li><a href="#hearing-tests">BERA / ABR Test</a></li>
+          <li><a href="#hearing-tests">Pure Tone Audiometry</a></li>
+          <li><a href="#hearing-tests">Tympanometry</a></li>
+          <li><a href="#hearing-aids">Hearing Aids</a></li>
+          <li><a href="#services">Speech Therapy</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Conditions</h4>
+        <ul>
+          <li><a href="#conditions">Autism Spectrum Disorder</a></li>
+          <li><a href="#conditions">Cerebral Palsy</a></li>
+          <li><a href="#conditions">Hearing Impairment</a></li>
+          <li><a href="#conditions">Stuttering</a></li>
+          <li><a href="#conditions">Voice Disorders</a></li>
+          <li><a href="#conditions">Misarticulation</a></li>
+        </ul>
+      </div>
+
+      <div class="foot-col">
+        <h4>Clinic Hours</h4>
+        <div class="foot-hrs">
+          <div class="fhr"><span class="d">Monday</span><span class="t">10 AM – 6 PM</span></div>
+          <div class="fhr"><span class="d">Tuesday</span><span class="t">10 AM – 6 PM</span></div>
+          <div class="fhr"><span class="d">Wednesday</span><span class="t">10 AM – 6 PM</span></div>
+          <div class="fhr"><span class="d">Thursday</span><span class="t">10 AM – 6 PM</span></div>
+          <div class="fhr"><span class="d">Friday</span><span class="t">10 AM – 6 PM</span></div>
+          <div class="fhr"><span class="d">Saturday</span><span class="t">10 AM – 6 PM</span></div>
+          <div class="fhr cl"><span class="d">Sunday</span><span class="t">Closed</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="foot-bot">
+      <div class="copy">© 2025 Advanced Speech &amp; Hearing Centre, Begusarai, Bihar. All rights reserved.</div>
+      <div class="seo">Best speech therapist Begusarai · Hearing aids Bihar · Autism clinic Begusarai · BERA test Bihar</div>
+    </div>
+  </div>
+</footer>
+
+<!-- ══════════ JAVASCRIPT ══════════ -->
+<script>
+  /* ── Mobile nav ── */
+  const mobNav  = document.getElementById('mobNav');
+  const menuBtn = document.getElementById('menuBtn');
+  const mobClose= document.getElementById('mobClose');
+
+  menuBtn.addEventListener('click', () => mobNav.classList.add('open'));
+  mobClose.addEventListener('click', () => mobNav.classList.remove('open'));
+  mobNav.addEventListener('click', e => { if (e.target === mobNav) mobNav.classList.remove('open'); });
+  mobNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobNav.classList.remove('open')));
+
+  /* ── FAQ accordion ── */
+  function toggleFaq(btn) {
+    const item   = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.fi').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  /* ── Form submit ── */
+  function handleSubmit(e) {
+    e.preventDefault();
+    const btn  = e.target.querySelector('button[type="submit"]');
+    const orig = btn.innerHTML;
+    btn.innerHTML = '✅ Request Sent! We\'ll call you soon.';
+    btn.style.background = '#27ae60';
+    btn.disabled = true;
+    setTimeout(() => {
+      btn.innerHTML = orig;
+      btn.style.background = '';
+      btn.disabled = false;
+      e.target.reset();
+    }, 4000);
+  }
+
+  /* ── Scroll-reveal ── */
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => {
+      if (en.isIntersecting) { en.target.classList.add('vis'); io.unobserve(en.target); }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -32px 0px' });
+
+  document.querySelectorAll('.fu').forEach((el, i) => {
+    el.style.transitionDelay = `${(i % 4) * 0.08}s`;
+    io.observe(el);
+  });
+
+  /* ── Active nav on scroll ── */
+  const secs = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    secs.forEach(s => { if (window.scrollY >= s.offsetTop - 130) cur = s.id; });
+    document.querySelectorAll('.desk-nav a').forEach(a => {
+      a.classList.toggle('active', a.getAttribute('href') === '#' + cur);
+    });
+  });
+
+  /* ── Floating CTA in header on mobile ── */
+  const hdrBook = document.getElementById('hdrBook');
+  const ham = document.querySelector('.ham');
+  function updateHdr() {
+    if (window.innerWidth <= 1024) {
+      hdrBook.style.display = 'inline-flex';
+      hdrBook.style.fontSize = window.innerWidth <= 480 ? '.78rem' : '.84rem';
+      hdrBook.style.padding  = window.innerWidth <= 480 ? '9px 14px' : '10px 18px';
+    } else {
+      hdrBook.style.display = 'none';
+    }
+  }
+  updateHdr();
+  window.addEventListener('resize', updateHdr);
+</script>
+</body>
+</html>
