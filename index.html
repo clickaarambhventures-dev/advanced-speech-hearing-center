@@ -14,23 +14,23 @@
    DESIGN TOKENS
 ============================================================ */
 :root {
-  --teal-deep:   #0d7377;
-  --teal-mid:    #14a085;
-  --teal-light:  #1abc9c;
-  --teal-pale:   #d4f5ef;
-  --blue-deep:   #1a4f6e;
-  --blue-light:  #d6eaf8;
-  --green-soft:  #e8f8f5;
-  --green-acc:   #27ae60;
-  --warm-white:  #fafcfc;
-  --off-white:   #f0f8f6;
-  --text-dark:   #1a2e2c;
-  --text-body:   #3a5250;
-  --text-muted:  #6b8e8c;
-  --border:      #cce8e3;
-  --sh-sm: 0 2px 12px rgba(13,115,119,.08);
-  --sh-md: 0 8px 32px rgba(13,115,119,.12);
-  --sh-lg: 0 20px 60px rgba(13,115,119,.16);
+  --teal-deep:   #002366;
+  --teal-mid:    #0141BC;
+  --teal-light:  #3A75E6;
+  --teal-pale:   #E6EFFF;
+  --blue-deep:   #001D5C;
+  --blue-light:  #D6EAF8;
+  --green-soft:  #FDE8E8;
+  --green-acc:   #A80203;
+  --warm-white:  #FFFFFF;
+  --off-white:   #F8F9FA;
+  --text-dark:   #111111;
+  --text-body:   #333333;
+  --text-muted:  #666666;
+  --border:      #E2E8F0;
+  --sh-sm: 0 2px 12px rgba(1, 65, 188, .08);
+  --sh-md: 0 8px 32px rgba(1, 65, 188, .12);
+  --sh-lg: 0 20px 60px rgba(1, 65, 188, .16);
   --r:  16px;
   --rs: 10px;
 }
@@ -123,6 +123,7 @@ header {
 
 /* Logo */
 .logo { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+.logo-img { height: 50px; width: auto; object-fit: contain; }
 .logo-ico {
   width: 44px; height: 44px; border-radius: 11px; flex-shrink: 0;
   background: linear-gradient(135deg, var(--teal-deep), var(--teal-light));
@@ -315,14 +316,7 @@ header {
 .why-num  { font-family:'DM Serif Display',serif; font-size: 4rem; color: rgba(255,255,255,.13); line-height: 1; margin-bottom: -12px; }
 .why-lbl  { font-size: 1.05rem; font-weight: 600; margin-bottom: 6px; }
 .why-sub  { font-size: .87rem; opacity: .73; }
-.why-float {
-  position: absolute; bottom: 0; right: 28px;
-  background: #fff; border-radius: 15px; padding: 18px 22px;
-  box-shadow: var(--sh-lg); text-align: center;
-}
-.why-float .big   { font-family:'DM Serif Display',serif; font-size: 1.9rem; color: var(--teal-deep); }
-.why-float .small { font-size: .72rem; color: var(--text-muted); }
-.why-badges { display: flex; gap: 10px; margin-top: 16px; }
+.why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 16px; }
 .mbadge {
   background: #fff; border: 1.5px solid var(--border);
   border-radius: 11px; padding: 14px 16px; flex: 1; text-align: center;
@@ -698,9 +692,7 @@ footer {
   .htest-grid   { grid-template-columns: 1fr; }
   .ha-types     { grid-template-columns: 1fr 1fr; }
 
-  .why-float    { right: 16px; padding: 14px 16px; }
-  .why-float .big { font-size: 1.5rem; }
-  .why-badges   { flex-wrap: wrap; }
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
 
   .frow { grid-template-columns: 1fr; }
 
@@ -748,8 +740,7 @@ footer {
 
   .why-main    { padding: 28px 24px; }
   .why-num     { font-size: 3rem; }
-  .why-badges  { flex-direction: column; }
-  .why-float   { position: static; margin-top: 16px; display: inline-block; border-radius: 12px; }
+  .why-grid { grid-template-columns: repeat(2, 1fr); }
   .why-vis     { padding-bottom: 0; }
 
   .faq-inner   { gap: 28px; }
@@ -814,13 +805,7 @@ footer {
     <div class="hdr-inner">
 
       <a href="#home" class="logo">
-        <div class="logo-ico">
-          <svg viewBox="0 0 32 32"><path d="M16 4C9.4 4 4 9.4 4 16s5.4 12 12 12 12-5.4 12-12S22.6 4 16 4zm-2 17v-5H9l7-10v5h5l-7 10z"/></svg>
-        </div>
-        <div class="logo-txt">
-          <div class="nm">Advanced Speech &amp; Hearing</div>
-          <div class="tg">Centre — Begusarai, Bihar</div>
-        </div>
+        <img src="assets/images/logo.png" alt="Advance Speech & Hearing Centre" class="logo-img">
       </a>
 
       <nav class="desk-nav">
@@ -852,7 +837,7 @@ footer {
 <div class="mob-nav" id="mobNav">
   <div class="mob-panel">
     <div class="mob-head">
-      <span class="mob-logo-txt">Advanced Speech &amp; Hearing</span>
+      <img src="assets/images/logo.png" alt="Advance Speech & Hearing Centre" class="logo-img" style="height:35px;">
       <button class="mob-close" id="mobClose" aria-label="Close menu">✕</button>
     </div>
     <a href="#home">🏠 Home</a>
@@ -906,13 +891,15 @@ footer {
       <div class="book-card" id="book">
         <h3>Book an Appointment</h3>
         <p>Our team will call you within 2 hours to confirm.</p>
-        <form onsubmit="handleSubmit(event)">
-          <div class="fg"><label>Full Name *</label><input type="text" placeholder="Your full name" required></div>
-          <div class="fg"><label>Phone Number *</label><input type="tel" placeholder="+91 XXXXX XXXXX" required></div>
-          <div class="fg"><label>Your City / Location</label><input type="text" placeholder="e.g. Begusarai, Patna, Darbhanga"></div>
+        <form action="https://formsubmit.co/khrishchauhan@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New Form Submission from Advanced Speech & Hearing Center!">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="fg"><label>Full Name *</label><input type="text" name="name" placeholder="Your full name" required></div>
+          <div class="fg"><label>Phone Number *</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required></div>
+          <div class="fg"><label>Your City / Location</label><input type="text" name="city" placeholder="e.g. Begusarai, Patna, Darbhanga"></div>
           <div class="fg">
             <label>Service Required</label>
-            <select>
+            <select name="service">
               <option value="">Select a service</option>
               <option>Hearing Test (OAE / BERA / PTA)</option>
               <option>Hearing Aid Trial &amp; Fitting</option>
@@ -923,7 +910,7 @@ footer {
               <option>General Consultation</option>
             </select>
           </div>
-          <div class="fg"><label>Your Query (Optional)</label><textarea placeholder="Briefly describe your concern..."></textarea></div>
+          <div class="fg"><label>Your Query (Optional)</label><textarea name="query" placeholder="Briefly describe your concern..."></textarea></div>
           <button type="submit" class="btn btn-p btn-full">
             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22,2 15,22 11,13 2,9"/></svg>
             Request Appointment
@@ -989,14 +976,11 @@ footer {
           <div class="why-lbl">Years Serving Bihar Families</div>
           <div class="why-sub">Trusted by patients across Begusarai, Darbhanga, Samastipur &amp; Muzaffarpur.</div>
         </div>
-        <div class="why-float">
-          <div class="big">4.9 ★</div>
-          <div class="small">Google Verified Rating</div>
-        </div>
-        <div class="why-badges">
+        <div class="why-grid">
           <div class="mbadge"><div class="num">1,500+</div><div class="lbl">Patients Helped</div></div>
           <div class="mbadge"><div class="num">7</div><div class="lbl">Conditions</div></div>
           <div class="mbadge"><div class="num">4</div><div class="lbl">Diagnostic Tests</div></div>
+          <div class="mbadge"><div class="num">4.9 ★</div><div class="lbl">Google Rating</div></div>
         </div>
       </div>
 
@@ -1345,30 +1329,28 @@ footer {
             <div><h4>Clinic Hours</h4><p>Mon – Sat: 10:00 AM – 6:00 PM<br><span style="color:#e74c3c;font-weight:600">Sunday: Closed</span></p></div>
           </div>
         </div>
-        <div class="map-box">
-          <svg fill="none" stroke="#0d7377" stroke-width="1.5" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="3"/></svg>
-          <p>📍 Advanced Speech &amp; Hearing Centre, Begusarai, Bihar</p>
-          <small style="font-size:.72rem;opacity:.55">Embed your Google Maps &lt;iframe&gt; here</small>
-        </div>
+
       </div>
 
       <div class="cform-wrap">
         <span class="chip">Appointment Request</span>
         <h3 class="ttl">Book an Appointment</h3>
         <p class="lead">Fill in the form and our team will confirm your slot within 2 hours during clinic hours.</p>
-        <form onsubmit="handleSubmit(event)">
+        <form action="https://formsubmit.co/khrishchauhan@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="New Form Submission from Advanced Speech & Hearing Center!">
+          <input type="hidden" name="_captcha" value="false">
           <div class="frow">
-            <div class="fg"><label>First Name *</label><input type="text" placeholder="First name" required></div>
-            <div class="fg"><label>Last Name *</label><input type="text" placeholder="Last name" required></div>
+            <div class="fg"><label>First Name *</label><input type="text" name="first_name" placeholder="First name" required></div>
+            <div class="fg"><label>Last Name *</label><input type="text" name="last_name" placeholder="Last name" required></div>
           </div>
           <div class="frow">
-            <div class="fg"><label>Phone Number *</label><input type="tel" placeholder="+91 XXXXX XXXXX" required></div>
-            <div class="fg"><label>Patient Age</label><input type="text" placeholder="e.g. 4 years / 65 years"></div>
+            <div class="fg"><label>Phone Number *</label><input type="tel" name="phone" placeholder="+91 XXXXX XXXXX" required></div>
+            <div class="fg"><label>Patient Age</label><input type="text" name="age" placeholder="e.g. 4 years / 65 years"></div>
           </div>
-          <div class="fg"><label>Your City / Location *</label><input type="text" placeholder="e.g. Begusarai, Darbhanga" required></div>
+          <div class="fg"><label>Your City / Location *</label><input type="text" name="city" placeholder="e.g. Begusarai, Darbhanga" required></div>
           <div class="fg">
             <label>Service Required</label>
-            <select>
+            <select name="service">
               <option value="">Select a service</option>
               <option>Hearing Test (OAE / BERA / PTA)</option>
               <option>Hearing Aid Trial &amp; Fitting</option>
@@ -1380,8 +1362,8 @@ footer {
               <option>General Consultation</option>
             </select>
           </div>
-          <div class="fg"><label>Preferred Date (Optional)</label><input type="date"></div>
-          <div class="fg"><label>Describe Your Concern</label><textarea placeholder="Please share any details about the patient's condition or what you are looking for..."></textarea></div>
+          <div class="fg"><label>Preferred Date (Optional)</label><input type="date" name="preferred_date"></div>
+          <div class="fg"><label>Describe Your Concern</label><textarea name="concern" placeholder="Please share any details about the patient's condition or what you are looking for..."></textarea></div>
           <button type="submit" class="btn btn-p btn-full">
             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22,2 15,22 11,13 2,9"/></svg>
             Send Appointment Request
@@ -1399,8 +1381,7 @@ footer {
     <div class="foot-inner">
       <div class="foot-brand">
         <div class="foot-logo">
-          <div class="foot-logo-ico"><svg viewBox="0 0 32 32"><path d="M16 4C9.4 4 4 9.4 4 16s5.4 12 12 12 12-5.4 12-12S22.6 4 16 4zm-2 17v-5H9l7-10v5h5l-7 10z"/></svg></div>
-          <div class="foot-logo-nm">Advanced Speech &amp; Hearing Centre</div>
+          <img src="assets/images/logo.png" alt="Advance Speech & Hearing Centre" class="logo-img" style="height:60px;">
         </div>
         <p>Bihar's trusted clinic for comprehensive audiology, speech-language therapy, and hearing aid services. Serving Begusarai, Darbhanga, Samastipur &amp; surrounding districts.</p>
         <a href="tel:+910123456789" class="foot-phone">
@@ -1448,7 +1429,7 @@ footer {
     </div>
 
     <div class="foot-bot">
-      <div class="copy">© 2025 Advanced Speech &amp; Hearing Centre, Begusarai, Bihar. All rights reserved.</div>
+      <div class="copy">© 2026 Advanced Speech &amp; Hearing Centre, Begusarai, Bihar. All rights reserved. | Developed by <a href="https://www.clickaarambh.com" target="_blank">Click Aarambh Ventures</a></div>
       <div class="seo">Best speech therapist Begusarai · Hearing aids Bihar · Autism clinic Begusarai · BERA test Bihar</div>
     </div>
   </div>
