@@ -188,7 +188,7 @@ header {
    HERO
 ============================================================ */
 .hero {
-  background: linear-gradient(145deg,#0a3d52 0%,var(--teal-deep) 55%,#0e8e7a 100%);
+  background: linear-gradient(145deg, var(--teal-deep) 0%, var(--blue-deep) 100%);
   position: relative; overflow: hidden;
   padding: 72px 0 0;
 }
@@ -501,7 +501,7 @@ header {
   background: linear-gradient(145deg,var(--teal-deep),var(--blue-deep));
   border-radius: 22px; padding: 40px 36px; color: #fff;
 }
-.abt-vis h3 { font-size: 1.5rem; margin-bottom: 10px; }
+.abt-vis h3 { font-size: 1.5rem; margin-bottom: 10px; color: #fff; }
 .abt-vis > p { opacity: .8; line-height: 1.72; font-size: .88rem; }
 .abt-vals { display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
 .av {
@@ -509,7 +509,7 @@ header {
   background: rgba(255,255,255,.1); border-radius: 11px; padding: 13px 14px;
 }
 .av-icon { font-size: 1.3rem; flex-shrink: 0; }
-.av h4 { font-size: .87rem; margin-bottom: 2px; font-family:'DM Sans',sans-serif; font-weight: 700; }
+.av h4 { font-size: .87rem; margin-bottom: 2px; font-family:'DM Sans',sans-serif; font-weight: 700; color: #fff; }
 .av p  { font-size: .78rem; opacity: .74; }
 .abt-creds { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 32px; }
 .acred {
@@ -574,7 +574,7 @@ header {
    FOOTER
 ============================================================ */
 footer {
-  background: #0e2229;
+  background: var(--blue-deep);
   color: rgba(255,255,255,.7);
   padding: 60px 0 0;
 }
@@ -698,7 +698,9 @@ footer {
 
   .abt-creds    { gap: 10px; }
 
-  .foot-inner   { grid-template-columns: 1fr; gap: 32px; }
+  .foot-inner   { grid-template-columns: 1fr 1fr; gap: 32px; text-align: left; }
+  .foot-brand   { grid-column: 1 / -1; }
+  .foot-logo    { justify-content: flex-start; }
 
   .cta-btns     { flex-direction: column; align-items: center; }
   .cta-btns .btn { width: min(280px, 100%); justify-content: center; }
